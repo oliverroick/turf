@@ -4,12 +4,7 @@ import { coordAll } from '@turf/meta';
 import { convertLength, Properties, Units, FeatureCollection, Feature, Point } from '@turf/helpers';
 import { collectionOf } from '@turf/invariant';
 import * as clustering from 'density-clustering';
-
-export type Dbscan = 'core' | 'edge' | 'noise'
-export interface DbscanProps extends Properties {
-    dbscan?: Dbscan;
-    cluster?: number;
-}
+import {DbscanProps} from './';
 
 /**
  * Takes a set of {@link Point|points} and partition them into clusters according to {@link DBSCAN's|https://en.wikipedia.org/wiki/DBSCAN} data clustering algorithm.
